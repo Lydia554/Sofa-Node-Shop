@@ -1,0 +1,33 @@
+<%- include('../includes/head.ejs') %>
+<link rel="stylesheet" href="/css/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <main>
+        <% if (prods.length > 0) { %>
+            <div class="row-products"> 
+                <% for (let product of prods) { %>
+                    <div class="cell-products">
+                        <a href="/products/<%= product._id %>">
+                            <article class="product-item-products">
+                                <div class="cell__image-products">
+                                    <img src="/<%= product.imageUrl %>"
+                                        alt="<%= product.title %>">
+                                </div> 
+                                <header class="cell__header-products">
+                                    <h1 class="product__title"><%= product.title %></h1>
+                                </header>
+                            </article>
+                        </a>
+                    </div>
+                <% } %>
+            </div>
+        <% } %>
+    </main>
+
+    <%- include('../includes/sofa-company.ejs') %>
+            <%- include('../includes/end.ejs') %>
+            <%- include('../includes/footer.ejs') %>

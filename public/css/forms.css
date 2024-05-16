@@ -1,0 +1,156 @@
+.form-control {
+  margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+  display: block;
+  width: 50%;
+  margin-bottom: 0.25rem;
+  margin-left: 25%;
+}
+
+.form-control input,
+.form-control textarea {
+  border: 2px solid #a1a1a1;
+  font: inherit;
+  border-radius: 2px;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline-color: blueviolet;
+}
+
+.form-control input.invalid,
+.form-control textarea.invalid {
+  border-color: red;
+}
+
+
+.login-email-text {
+  font-size: 30px;
+}
+
+
+.login-pass-text {
+  font-size: 20px;
+}
+
+
+.btn-login {
+  max-width: 100%;
+  margin: 0 auto;
+  width: 40%;
+  height: 10%;
+  display: inline-block;
+  padding: 0.25rem 0.25rem;
+  text-decoration: none;
+  font: inherit;
+  border: 2px solid #000;
+  color: #000;
+  background: white;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  
+
+}
+.image-form h1,
+.description-form h1,
+.dimension-form h1,
+.title-form h1 {
+  font-size: 3px;
+}
+
+.btn-add-form
+
+{
+  display: inline-block;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  font: inherit;
+  border: 2px solid #000;
+  color: #000;
+  background: white;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  max-width: 100%;
+  margin: 0 auto;
+  width: 10%;
+  height: 30%;
+  margin-left: 25%;
+
+}
+
+
+.btn-add-form:hover,
+.btn-add-from:active {
+  background-color: darkred;
+  color: #000;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  padding: 1rem 2rem;
+  
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+  .form-control {
+    margin: 0.5rem 0;
+  }
+  .login-email-text {
+    font-size: 20px;
+  }
+
+  
+.login-pass-text {
+  font-size: 30px;
+}
+
+  .form-control label,
+  .form-control input,
+  .form-control textarea {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .form-control input,
+  .form-control textarea {
+    padding: 0.5rem;
+  }
+
+  .btn-login {
+    width: 50%;
+    padding: 0.5rem 0.5rem;
+  
+} 
+
+
+.image-form h1,
+.description-form h1,
+.dimension-form h1,
+.price-form h1,
+.title-form h1{
+  font-size: 20px; 
+}
+
+.btn-add-form {
+  width: 50%; 
+  height: auto; 
+  padding: 0.5rem 0.5rem; 
+ 
+}
+
+
+
+}

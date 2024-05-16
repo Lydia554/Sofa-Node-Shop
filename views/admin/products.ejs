@@ -1,0 +1,42 @@
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    </head>
+
+    <body>
+        
+        <%- include('../includes/navigation.ejs') %>
+        
+
+            <main class="main-product">
+                <% if (prods.length > 0) { %>
+                    <div class="row-product">
+                        
+                        <% for (let product of prods) { %>
+                            <article class="cell product-item-product">
+                                <header class="cell__header-product">
+                                  <h1 style="font-size: 0.5vw" class="product__title-product">
+                                    <%= product.title %>
+                                  </h1>
+                                </header>
+                                <div class="cell__image">
+                                  <img src="/<%= product.imageUrl %>" alt="<%= product.title %>">
+                                </div>
+                                <div class="manage">
+                                  <a href="/admin/edit-product/<%= product._id %>?edit=true"  class="btn btn-edit-product">Edit</a>
+                                  <button  class="btn btn-delete-product" type="button" onclick="deleteProduct(this)">Delete</button>
+                                  <input type="hidden" value="<%= product._id %>" name="productId">
+                                  <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                </div>
+                              </article>
+                            <% } %>
+                    </div>
+                    
+                    <% } else { %>
+                        <h1>No Products Found!</h1>
+                        <% } %>
+            </main>
+            <%- include('../includes/end.ejs') %>
+            <script src="/js/admin.js"></script>
