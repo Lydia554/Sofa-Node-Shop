@@ -909,32 +909,32 @@ footer a:hover {
 
   
   .card {
-    width: 100%; /* Set width to 100% */
-    height: auto; /* Set height to auto */
+    width: 100%; 
+    height: auto; 
   }
 
   .card-img-top {
-    height: auto; /* Set image height to auto */
-    width: 100%; /* Set image width to 100% */
+    height: auto; 
+    width: 100%; 
   }
 
   .card-title {
-    font-size: 2rem; /* Increase title font size */
+    font-size: 2rem; 
   }
 
   .cell {
-    width: 100%; /* Set cell width to 100% */
-    height: auto; /* Set cell height to auto */
+    width: 100%; 
+    height: auto; 
   }
 
   .image {
-    height: auto; /* Set image height to auto */
-    width: 100%; /* Set image width to 100% */
+    height: auto; 
+    width: 100%; 
   }
 
   .image img {
-    height: auto; /* Set image height to auto */
-    width: 100%; /* Set image width to 100% */
+    height: auto; 
+    width: 100%; 
   }
 
   .cell.product-item {
@@ -1146,6 +1146,7 @@ footer a:hover {
 @media (max-width: 600px) {
   .main-header {
     height: 5rem;
+     font-size: 8px;
   }
 
   .main-header__nav {
@@ -1158,7 +1159,7 @@ footer a:hover {
 
   .main-header__item a,
   .main-header__item button {
-    font-size: 0.8rem;
+     font-size: 8px;
   }
 
   .mobile-nav {
