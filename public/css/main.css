@@ -1200,6 +1200,10 @@ footer a:hover {
    
   }
 
+   .btn-add {
+    width: 50%;
+  }
+
 
   .image {
     height: 2.5rem;
