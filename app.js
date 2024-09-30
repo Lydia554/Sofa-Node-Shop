@@ -1,29 +1,12 @@
-const path = require("path");
-const fs = require("fs");
-const https = require("https");
-
-const express = require("express");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-mongoose.set("useNewUrlParser", true);
-mongoose.set("useFindAndModify", false);
-mongoose.set("useCreateIndex", true);
-mongoose.set("useUnifiedTopology", true);
-const session = require("express-session");
-const MongoDBStore = require("connect-mongodb-session")(session);
-const csrf = require("csurf");
-const flash = require("connect-flash");
-const multer = require("multer");
-const helmet = require("helmet");
-const compression = require("compression");
-const morgan = require("morgan");
 
 const errorController = require("./controllers/error");
 const shopController = require("./controllers/shop");
 const isAuth = require("./middleware/is-auth");
 const User = require("./models/user");
 
-const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.0m31mse.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
+// MongoDB configuration from environment variables
+const MONGODB_URI = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PA>
+console.log(MONGODB_URI);
 
 const app = express();
 const store = new MongoDBStore({
@@ -32,16 +15,15 @@ const store = new MongoDBStore({
 });
 const csrfProtection = csrf();
 
-// const privateKey = fs.readFileSync('server.key');
-// const certificate = fs.readFileSync('server.cert');
-
+// File Storage Configuration
 const fileStorage = multer.diskStorage({
   destination: "./images",
   filename: (req, file, cb) => {
-    cb(null, new Date().toISOString().replace(/:/g,"_") + "-" + file.originalname);
+    cb(null, new Date().toISOString().replace(/:/g, "_") + "-" + file.originaln>
   },
 });
 
+// File Filter for Uploaded Files
 const fileFilter = (req, file, cb) => {
   if (
     file.mimetype === "image/png" ||
