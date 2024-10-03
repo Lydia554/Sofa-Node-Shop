@@ -21,8 +21,7 @@ const isAuth = require("./middleware/is-auth");
 const User = require("./models/user");
 
 // MongoDB configuration from environment variables
-const MONGODB_URI = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PA>
-console.log(MONGODB_URI);
+const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.0m31mse.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
 
 const app = express();
 const store = new MongoDBStore({
