@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  max-width: 100%; /* Ensure container does not exceed viewport width */
+  width: 90%; 
 }
 
 .logo {
@@ -143,8 +143,8 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
-  justify-items: stretch; /* Stretch content to fill each cell */
-  align-items: stretch; /* Stretch content to fill each cell */
+  justify-items: stretch; 
+  align-items: stretch; 
 }
 
 
@@ -158,16 +158,16 @@ main {
   font-size: 1.5rem;
   text-align: center;
   padding: 2rem;
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
+  justify-content: center; 
+  align-items: center; 
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   list-style: none;
   padding: 0;
   margin: 0,5rem;
-  display: flex; /* Changed from grid to flex */
+  display: flex; 
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Hide the part of the image that exceeds the cell size */
+  overflow: hidden; 
 
 
 }
@@ -391,26 +391,6 @@ main {
 
 
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-}
-
-
-
-.carousel-control-next {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.carousel-control-prev {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-
 .row-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -465,7 +445,7 @@ main {
 
 .mySlides {
   display:none;
-  width: 110%;
+  width: 100%;
 
 }
 
@@ -633,7 +613,7 @@ main {
  
   text-align: center;
   padding-top: 30rem;
-  padding-left: 50%;
+  margin-left: 50%;
   
 
 
@@ -803,12 +783,11 @@ table td {
 
 
 
-
-
 .section-p1 {
   padding: 40px 80px;
   margin-top: 30rem;
   width: 100%;
+  display: flex;
 }
 
 .section-m1 {
@@ -819,9 +798,9 @@ table td {
 footer {
   display: flex;
   flex-direction: row; 
-  flex-wrap: wrap; 
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
 }
 
@@ -830,7 +809,8 @@ footer .col {
   flex-direction: column;
   align-items: center; 
   margin-bottom: 20px;
-  flex-basis: 25%; 
+  flex-basis: auto;
+ 
 }
 .logo-footer img {
   width: 50%;
@@ -1183,11 +1163,16 @@ footer a:hover {
 
 
 
-@media (max-width: 600px) {
-body {
+@media (max-width: 600px) 
+
+{
+  
+  body {
   overflow-x: hidden;
 }
-  
+
+
+
   .main-header {
     height: 5rem;
      font-size: 8px;
@@ -1216,13 +1201,13 @@ body {
     padding: 0.3rem 1rem;
   }
 
-
   .card {
     font-size: 0.8rem;
     padding: 0.5rem;
     margin: 0 auto;
     width: 200px;
     margin: 0 auto;
+    
   }
 
   .card-img-top {
@@ -1242,6 +1227,7 @@ body {
   .cell {
     font-size: 1rem;
     padding: 1rem;
+    gap: 5rem;
    
   }
 
@@ -1329,13 +1315,9 @@ body {
 
 
 
-
-
-
-
-
-  
-
+.row {
+gap: 2rem;
+}
 
 
   .row-products {
