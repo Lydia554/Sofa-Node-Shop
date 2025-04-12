@@ -21,7 +21,7 @@ const isAuth = require("./middleware/is-auth");
 const User = require("./models/user");
 
 // MongoDB configuration from environment variables
-const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.0m31mse.mongodb.net/${process.env.MONGO_DEFAULT_DATABASE}`;
+const MONGODB_URI = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}:${process.env.MONGO_PORT}/${process.env.MONGO_DEFAULT_DATABASE}`;
 
 const app = express();
 const store = new MongoDBStore({
@@ -34,7 +34,7 @@ const csrfProtection = csrf();
 const fileStorage = multer.diskStorage({
   destination: "./images",
   filename: (req, file, cb) => {
-    cb(null, new Date().toISOString().replace(/:/g, "_") + "-" + file.originaln>
+    cb(null, new Date().toISOString().replace(/:/g, "_") + "-" + file.originalname);
   },
 });
 
