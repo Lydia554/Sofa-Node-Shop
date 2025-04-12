@@ -1,4 +1,4 @@
-
+require('dotenv').config();
 const path = require("path");
 const fs = require("fs");
 const https = require("https");
@@ -20,9 +20,11 @@ const shopController = require("./controllers/shop");
 const isAuth = require("./middleware/is-auth");
 const User = require("./models/user");
 
+console.log(process.env.MONGO_DEFAULT_DATABASE);
 // MongoDB configuration from environment variables
 const MONGODB_URI = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOST}:${process.env.MONGO_PORT}/${process.env.MONGO_DEFAULT_DATABASE}`;
 
+console.log(MONGODB_URI);
 const app = express();
 const store = new MongoDBStore({
   uri: MONGODB_URI,
